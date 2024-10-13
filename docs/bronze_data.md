@@ -5,6 +5,7 @@ The table above brings details about the raw data extracted from the API:
 ### Raw data
 
 | column name | type | description |
+|-------------|------|-------------|
 | id | STRING | id to identify the brewery
 | name | STRING | name of the brewery
 | brewery_type | STRING | size of the brewery
