@@ -1,0 +1,7 @@
+pandas==2.2.3
+requests==2.32.3
+fastparquet==2024.5.0
+pyarrow==17.0.0
+apache-airflow==2.10.2
+python-dotenv==1.0.1
+psycopg2-binary==2.9.9
