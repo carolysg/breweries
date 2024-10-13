@@ -36,6 +36,7 @@ The ETL process begins by extracting data from an external API, storing it in th
 
 The project structure is organized as follows:
 
+```python
 breweries/
 ├── dags/                      # Airflow DAG files
 │   └── brewery_pipeline.py     # Main ETL DAG
@@ -53,6 +54,7 @@ breweries/
 ├── Dockerfile                 # Dockerfile for Airflow and dependencies
 ├── docker-compose.yml         # Docker Compose configuration for services
 └── README.md                  # Project documentation
+```
 
 <br>
 
