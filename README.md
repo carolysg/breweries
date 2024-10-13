@@ -1,6 +1,6 @@
 # Breweries Project
 
-# Summary
+## Summary
 - [Description](#description)
 - [Project Structure](#project-structure)
 - [Instructions](#instructions)
@@ -65,18 +65,17 @@ In this section, you'll find all the instructions you need to reproduce this pro
 ### Dependencies
 
 Before running the project, ensure you have the following installed:
-- Docker: If you want to run Airflow and Postgres in containers.
-- Docker Compose: To manage multi-container applications.
+- Docker: If you want to run Airflow and Postgres in containers. You can download it [here](https://docs.docker.com/get-started/get-docker/).
 
-You can install the required Python dependencies using pip (if running outside Docker):
+If running outside Docker, you can install the required Python dependencies using pip:
 ```pip install -r requirements.txt```
 
 ### Step-by-step
 
 1. Fork and clone the repository: On the GitHub page of the repository, click on the "Fork" button in the upper right corner to create your own copy of the project. Then, clone your forked repository:
 ```
-git clone https://github.com/<your_username>/breweries_project.git
-cd breweries_project
+git clone https://github.com/<your_username>/breweries.git
+cd breweries
 ```
 
 2. 
