@@ -2,6 +2,6 @@
 airflow resetdb
 airflow db init
 airflow upgradedb
-airflow users create -r Admin -u admin -e admin@admin.com -f admin -l admin -p admin
+airflow users create -r Admin -u admin -e admin@admin.com -f admin -l admin -p admin || echo "Admin user already exists"
 airflow scheduler &
 airflow webserver
