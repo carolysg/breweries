@@ -33,10 +33,10 @@ The project consists on the following pipeline:
 The ETL process begins by extracting data from an external API, storing it in three stages (bronze, silver, and gold), and finally loading it into a PostgreSQL database. Apache Airflow orchestrates the entire pipeline, managing the flow from extraction to transformation and loading.
 
 - API: The data is fetched from an external source using requests in a Python script.
-- Bronze: Raw data is saved in JSON format. More details [here](docs/bronze_data.md).
-- Silver: Transformed data is stored. More details [here](docs/silver_data.md).
-- Gold: Aggregated and final data is stored here. It's an aggregated table with the quantity of breweries per type and location. More details [here](docs/gold_data.md).
-- Postgres: The aggregated data is loaded into the PostgreSQL database for further use. More details [here](docs/postgres_data.md).
+- Bronze: Raw data is saved in JSON format. More details <a href="docs/bronze_data.md" target="_blank">here</a>.
+- Silver: Transformed data is stored. More details <a href="docs/silver_data.md" target="_blank">here</a>.
+- Gold: Aggregated and final data is stored here. It's an aggregated table with the quantity of breweries per type and location. More details <a href="docs/gold_data.md" target="_blank">here</a>.
+- Postgres: The aggregated data is loaded into the PostgreSQL database for further use. More details <a href="docs/postgres_data.md" target="_blank">here</a>.
 
 To ensure the reliability of the pipeline, monitoring and alerting mechanisms have been implemented. Logging is integrated throughout the process to track successes and failures, while error handling captures any issues during data extraction, transformation, or loading.
 
@@ -71,7 +71,7 @@ In this section, you'll find all the instructions you need to reproduce this pro
 ### Dependencies and recommendations
 
 Before running the project, ensure you have the following installed:
-- Docker: If you want to run Airflow and Postgres in containers. You can download it [here](https://docs.docker.com/get-started/get-docker/). If you encounter a WSL error when launching Docker on your machine, I recommend checking [this link](https://stackoverflow.com/questions/66091744/docker-failed-to-start).
+- Docker: If you want to run Airflow and Postgres in containers. You can download it <a href="https://docs.docker.com/get-started/get-docker/" target="_blank">here</a>. If you encounter a WSL error when launching Docker on your machine, I recommend checking <a href="https://stackoverflow.com/questions/66091744/docker-failed-to-start" target="_blank">this link</a>.
 
 The project was developed on Windows 10 and used VSCode.
 
@@ -120,4 +120,4 @@ To visualize the data in PostgreSQL, consider downloading tools like pgAdmin or 
 
 ## Contact
 
-If you have any questions or suggestions, feel free to reach me on [Linkedin](https://www.linkedin.com/in/carolyumi/) or [e-mail](mailto:carolinagoshima@gmail.com).
+If you have any questions or suggestions, feel free to reach me on <a href="https://www.linkedin.com/in/carolyumi/" target="_blank">Linkedin</a> or [e-mail](mailto:carolinagoshima@gmail.com).
