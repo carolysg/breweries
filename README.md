@@ -1,5 +1,7 @@
 # Breweries Project
 
+<br>
+
 ## Summary
 - [Description](#description)
 - [Project Structure](#project-structure)
