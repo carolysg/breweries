@@ -90,8 +90,10 @@ docker-compose ps
 This will display a list of active containers and their status.
 
 5. Access Airflow web interface: Open your web browser and go to http://localhost:8080/. You will see the Apache Airflow login page. Use the following credentials to log in:
+
 - Username: Admin
 - Password: admin
+
 You can change these credentials in the airflow-entrypoint.sh file if desired.
 
 6. Run the DAG: Upon logging into Airflow, you will see the brewery_pipeline DAG in the interface. If it’s not running automatically, you may need to trigger it manually. Click the "Play" button to start the DAG execution. You can monitor the progress and troubleshoot any issues by checking the logs, which can be viewed directly in the Airflow interface or in the logs folder that is created within the project directory.
