@@ -62,20 +62,49 @@ breweries/
 
 In this section, you'll find all the instructions you need to reproduce this project on your own machine.
 
-### Dependencies
+### Dependencies and recommendations
 
 Before running the project, ensure you have the following installed:
-- Docker: If you want to run Airflow and Postgres in containers. You can download it [here](https://docs.docker.com/get-started/get-docker/).
+- Docker: If you want to run Airflow and Postgres in containers. You can download it [here](https://docs.docker.com/get-started/get-docker/). If you encounter a WSL error when launching Docker on your machine, I recommend checking [this link](https://stackoverflow.com/questions/66091744/docker-failed-to-start).
 
-If running outside Docker, you can install the required Python dependencies using pip:
-```pip install -r requirements.txt```
+The project was developed on Windows 10 and used VSCode.
 
 ### Step-by-step
 
 1. Fork and clone the repository: On the GitHub page of the repository, click on the "Fork" button in the upper right corner to create your own copy of the project. Then, clone your forked repository:
 ```
 git clone https://github.com/<your_username>/breweries.git
-cd breweries
 ```
 
-2. 
+2. Open the Docker Desktop. 
+
+3. Build and start the services: Change to your project directory and run the following command in the terminal to build the Docker containers and start the services:
+```
+docker-compose up --build
+```
+
+4. Check active containers: After the services are up and running, you can check the status of the containers with:
+```
+docker-compose ps
+```
+This will display a list of active containers and their status.
+
+5. Access Airflow web interface: Open your web browser and go to http://localhost:8080/. You will see the Apache Airflow login page. Use the following credentials to log in:
+- Username: Admin
+- Password: admin
+You can change these credentials in the airflow-entrypoint.sh file if desired.
+
+6. Run the DAG: Upon logging into Airflow, you will see the brewery_pipeline DAG in the interface. If it’s not running automatically, you may need to trigger it manually. Click the "Play" button to start the DAG execution. You can monitor the progress and troubleshoot any issues by checking the logs, which can be viewed directly in the Airflow interface or in the logs folder that is created within the project directory.
+
+7. Verify the Data: After running the DAG, you can check the data in the bronze, silver, and gold folders that were created during the process. Additionally, you can access the data stored in the PostgreSQL database using the following commands in your terminal:
+```
+# Access the PostgreSQL database
+docker exec -it <postgres_container_name> psql -U brewery_airflow -d brewery_airflow
+
+# List the tables in the database
+\dt
+
+# Query the breweries table
+SELECT * FROM breweries LIMIT 10;
+```
+You can change the PostgreSQL database configurations in the docker-compose.yml and .env files if desired.
