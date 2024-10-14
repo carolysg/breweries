@@ -6,7 +6,7 @@ In this layer, the following transformations were applied to the data:
 - Filtering: Rows where the brewery count was zero were removed.
 
 The aggregated data was saved in parquet format.
-The table above brings details about the aggregated data:
+The table below brings details about the aggregated data:
 
 | column name | type | description |
 |-------------|------|-------------|

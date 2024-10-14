@@ -108,3 +108,4 @@ docker exec -it <postgres_container_name> psql -U brewery_airflow -d brewery_air
 SELECT * FROM breweries LIMIT 10;
 ```
 You can change the PostgreSQL database configurations in the docker-compose.yml and .env files if desired.
+To visualize the data in PostgreSQL, consider downloading tools like pgAdmin or DBeaver for an easier user interface.

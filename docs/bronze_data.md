@@ -1,6 +1,6 @@
 # Bronze layer
 
-The table above brings details about the raw data extracted from the API:
+The table below brings details about the raw data extracted from the API:
 
 ### Raw data
 
