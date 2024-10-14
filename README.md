@@ -94,9 +94,9 @@ This will display a list of active containers and their status.
 - Username: Admin
 - Password: admin
 
-You can change these credentials in the airflow-entrypoint.sh file if desired.
+You can change these credentials in the `airflow-entrypoint.sh` file if desired.
 
-6. Run the DAG: Upon logging into Airflow, you will see the brewery_pipeline DAG in the interface. If it’s not running automatically, you may need to trigger it manually. Click the "Play" button to start the DAG execution. You can monitor the progress and troubleshoot any issues by checking the logs, which can be viewed directly in the Airflow interface or in the logs folder that is created within the project directory.
+6. Run the DAG: Upon logging into Airflow, you will see the `brewery_pipeline` DAG in the interface. If it’s not running automatically, you may need to trigger it manually. Click the "Play" button to start the DAG execution. You can monitor the progress and troubleshoot any issues by checking the logs, which can be viewed directly in the Airflow interface or in the logs folder that is created within the project directory.
 
 7. Verify the Data: After running the DAG, you can check the data in the bronze, silver, and gold folders that were created during the process. Additionally, you can access the data stored in the PostgreSQL database using the following commands in your terminal:
 ```
@@ -109,5 +109,5 @@ docker exec -it <postgres_container_name> psql -U brewery_airflow -d brewery_air
 # Query the breweries table
 SELECT * FROM breweries LIMIT 10;
 ```
-You can change the PostgreSQL database configurations in the docker-compose.yml and .env files if desired.
+You can change the PostgreSQL database configurations in the `docker-compose.yml` and `.env` files if desired.
 To visualize the data in PostgreSQL, consider downloading tools like pgAdmin or DBeaver for an easier user interface.
