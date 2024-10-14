@@ -40,6 +40,8 @@ The ETL process begins by extracting data from an external API, storing it in th
 
 To ensure the reliability of the pipeline, monitoring and alerting mechanisms have been implemented. Logging is integrated throughout the process to track successes and failures, while error handling captures any issues during data extraction, transformation, or loading.
 
+The Airflow DAG is scheduled to run every day, with a `schedule_interval` set to `timedelta(days=1)`. This interval can be changed in the DAG definition.
+
 The project structure is organized as follows:
 
 ```python
