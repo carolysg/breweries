@@ -4,6 +4,7 @@
 - [Description](#description)
 - [Project Structure](#project-structure)
 - [Instructions](#instructions)
+- [Contact](#contact)
 
 <br>
 
@@ -28,11 +29,14 @@ The project consists on the following pipeline:
 ![Pipeline of this project](images/01_pipeline.png)
 
 The ETL process begins by extracting data from an external API, storing it in three stages (bronze, silver, and gold), and finally loading it into a PostgreSQL database. Apache Airflow orchestrates the entire pipeline, managing the flow from extraction to transformation and loading.
+
 - API: The data is fetched from an external source using requests in a Python script.
 - Bronze: Raw data is saved in JSON format. More details [here](docs/bronze_data.md).
 - Silver: Transformed data is stored. More details [here](docs/silver_data.md).
 - Gold: Aggregated and final data is stored here. It's an aggregated table with the quantity of breweries per type and location. More details [here](docs/gold_data.md).
 - Postgres: The aggregated data is loaded into the PostgreSQL database for further use. More details [here](docs/postgres_data.md).
+
+To ensure the reliability of the pipeline, monitoring and alerting mechanisms have been implemented. Logging is integrated throughout the process to track successes and failures, while error handling captures any issues during data extraction, transformation, or loading.
 
 The project structure is organized as follows:
 
@@ -96,7 +100,7 @@ This will display a list of active containers and their status.
 
 You can change these credentials in the `airflow-entrypoint.sh` file if desired.
 
-6. Run the DAG: Upon logging into Airflow, you will see the `brewery_pipeline` DAG in the interface. If it’s not running automatically, you may need to trigger it manually. Click the "Play" button to start the DAG execution. You can monitor the progress and troubleshoot any issues by checking the logs, which can be viewed directly in the Airflow interface or in the logs folder that is created within the project directory.
+6. Run the DAG: You will see the `brewery_pipeline` DAG in the interface. If it’s not running automatically, you may need to trigger it manually. Click the "Play" button to start the DAG execution. You can monitor the progress and troubleshoot any issues by checking the logs, which can be viewed directly in the Airflow interface or in the logs folder that is created within the project directory.
 
 7. Verify the Data: After running the DAG, you can check the data in the bronze, silver, and gold folders that were created during the process. Additionally, you can access the data stored in the PostgreSQL database using the following commands in your terminal:
 ```
@@ -111,3 +115,7 @@ SELECT * FROM breweries LIMIT 10;
 ```
 You can change the PostgreSQL database configurations in the `docker-compose.yml` and `.env` files if desired.
 To visualize the data in PostgreSQL, consider downloading tools like pgAdmin or DBeaver for an easier user interface.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach me on [Linkedin](https://www.linkedin.com/in/carolyumi/) or [e-mail](mailto:carolinagoshima@gmail.com).
