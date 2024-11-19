@@ -71,7 +71,7 @@ def transform_data():
         if df_final['state_province'].equals(df_final['state']):
             df_final.drop('state', axis=1, inplace=True)
         df_final.to_parquet('./data/silver/breweries_transformed.parquet', 
-                             partition_cols=['country', 'state_province', 'city'], 
+                             partition_cols=['country', 'state_province'], 
                              existing_data_behavior='delete_matching')
         logging.info("Data transformed successfully.")
     except Exception as e:
